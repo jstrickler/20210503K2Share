@@ -45,3 +45,15 @@ def hero_queries(request):
     }
     return render(request, 'hero_queries.html', context)
 
+"""
+query_list = []
+if need_name:
+    query_list.append(Q(....))
+elif need_other:
+    query_list.append(Q(....))
+
+results = MyModel.filter(*query_list)
+"""
+
+
+

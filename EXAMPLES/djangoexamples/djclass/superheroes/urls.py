@@ -7,11 +7,9 @@ from . import views
 
 urlpatterns = [
     # welcome page using template view
-    path(
-        '',
-        views.HomeView.as_view(),
-        name = 'home'
-    ),
+    path('', views.HomeView.as_view(), name='home'),
+
+    path('hello', views.HelloView.as_view(), name='hello'),
 
     # NO view -- don't do this:
     path(
