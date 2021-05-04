@@ -1,0 +1,37 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-primary" role="alert">
+  Example of a primary alert (class="alert alert-primary")
+</div>
+
+<div class="alert alert-primary" role="alert">
+  Example of a primary alert
+</div>
+<div class="alert alert-secondary" role="alert">
+  Example of a secondary alert
+</div>
+<div class="alert alert-success" role="alert">
+  Example of a success alert
+</div>
+<div class="alert alert-danger" role="alert">
+  Example of a danger alert
+</div>
+<div class="alert alert-warning" role="alert">
+  Example of a warning alert
+</div>
+<div class="alert alert-info" role="alert">
+  Example of an info alert
+</div>
+<div class="alert alert-light" role="alert">
+  Example of a light alert
+</div>
+<div class="alert alert-dark" role="alert">
+  Example of a dark alert
+</div>
+{% endblock content %}
+
+{% block footer %}{{ block.super }}{% endblock %}

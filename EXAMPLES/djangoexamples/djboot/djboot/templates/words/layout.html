@@ -1,0 +1,45 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      {{ words.0 }}
+    </div>
+    <div class="col">
+      {{ words.1 }}
+    </div>
+    <div class="col">
+      {{ words.2 }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {{ words.3 }}
+    </div>
+    <div class="col">
+      {{ words.4 }}
+    </div>
+    <div class="col">
+      {{ words.5 }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {{ words.6 }}
+    </div>
+    <div class="col">
+      {{ words.7 }}
+    </div>
+    <div class="col">
+      {{ words.8 }}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+{% block footer %}{{ block.super }}{% endblock %}

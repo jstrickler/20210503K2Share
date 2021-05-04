@@ -1,0 +1,15 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+{% for word in words %}
+
+<div class="row{% cycle ' row-odd' '' %}">{{ word }}</div>
+
+{% endfor word %}
+
+{% endblock content %}
+
+{% block footer %}{{ block.super }}{% endblock %}

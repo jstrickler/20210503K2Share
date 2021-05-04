@@ -1,0 +1,18 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+<div class="row"><a href="{% url 'words:homenoboot' %}">Home page without Bootstrap</a></div>
+<div class="row"><a href="{% url 'words:layout' %}">Hard-coded Bootstrap Row/Column layout</a></div>
+<div class="row"><a href="{% url 'words:layoutloops' %}">Bootstrap Row/Column layout with loops </a></div>
+<div class="row"><a href="{% url 'words:cycle' %}">Bootstrap plus cycle tag</a></div>
+<div class="row"><a href="{% url 'words:grid' %}">Bootstrap grid</a></div>
+<div class="row"><a href="{% url 'words:alerts' %}">Bootstrap alerts</a></div>
+<div class="row"><a href="{% url 'words:breadcrumbs' %}">Bootstrap breadcrumbs</a></div>
+
+{% endblock content %}
+
+{% block footer %}{% endblock %}
+

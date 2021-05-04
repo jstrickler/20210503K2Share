@@ -1,0 +1,23 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+{% block content %}
+
+<div class="container">
+  {% for word in words %}
+  {% if forloop.counter0|divisibleby:"4" %}
+  <div class="row">
+  {% endif %}
+    <div class="col">
+    {{ word }}
+    </div>
+  {% if forloop.counter|divisibleby:"4" %}
+  </div>
+  {% endif %}
+
+  {% endfor word %}
+
+</div>
+
+{% endblock content %}
+{% block footer %}{{ block.super }}{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "superheroes/superheroes_base.html" %}
+{% block content %}
+<div class="container">
+You have successfully created/updated the record
+</div>
+
+<div class="container">
+<a href="{% url 'superheroes:herolistplus' %}">Return to list</a>
+</div>
+
+{% endblock content %}
+

@@ -1,0 +1,15 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+{% block content %}
+
+<nav class="breadcrumb">
+  <a class="breadcrumb-item" href="{% url 'home' %}">Home</a>
+  <a class="breadcrumb-item" href="{% url 'words:home' %}">Words</a>
+  <a class="breadcrumb-item" href="{% url 'words:breadcrumbs' %}">Breadcrumbs</a>
+</nav>
+
+{% endblock content %}
+
+{% block footer %}{{ block.super }}{% endblock %}

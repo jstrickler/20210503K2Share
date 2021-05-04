@@ -1,0 +1,25 @@
+{% extends "words/words_base.html" %}
+
+{% block header %}{{ block.super }}{% endblock %}
+
+
+{% block content %}
+<p>This example demonstrates a grid with different column widths
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1">CODE</div>
+    <div class="col-sm-11">Airport</div>
+  </div>
+
+  {% for airport in airports %}
+  <div class="row">
+    <div class="col-sm-1">{{ airport.0 }}</div>
+    <div class="col-sm-11">{{ airport.1 }}</div>
+  </div>
+  {% endfor airport %}
+</div>
+{% endblock content %}
+
+{% block footer %}{{ block.super }}{% endblock %}
+
