@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.db.models import Min, Max, Count, FloatField, Q
 from .models import Superhero
 
+app_name = 'superheroes'
 
 def home(request):
     data = {

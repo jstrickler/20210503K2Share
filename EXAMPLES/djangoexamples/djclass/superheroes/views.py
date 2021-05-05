@@ -40,6 +40,12 @@ class HomeView(MyCustomMixin, TemplateView):
         'message': 'Welcome to the superheroes app for class-based views',
     }
 
+class AnotherView(MyCustomMixin, TemplateView):
+    data = {
+        'message': 'And another view with the same template and mixin',
+    }
+
+
 class HelloView(MyCustomMixin, TemplateView):
     data = {
        'message': 'Hello from the Mixin-ified HelloView class'

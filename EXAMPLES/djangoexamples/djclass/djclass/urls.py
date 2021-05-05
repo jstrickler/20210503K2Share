@@ -24,7 +24,7 @@ from django import VERSION
 # site-wide route mapping
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(('superheroes.urls', "superheroes"))),
+    path('', include('superheroes.urls', namespace="superheroes")),
 ]
 
 # include Django Debug toolbar if DEBUG is set

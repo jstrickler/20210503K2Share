@@ -5,11 +5,15 @@ from django.urls import path
 from django.views.generic import TemplateView
 from . import views
 
+app_name = "superheroes"
+
 urlpatterns = [
     # welcome page using template view
     path('', views.HomeView.as_view(), name='home'),
 
     path('hello', views.HelloView.as_view(), name='hello'),
+
+    path('another', views.AnotherView.as_view(), name='another'),
 
     # NO view -- don't do this:
     path(

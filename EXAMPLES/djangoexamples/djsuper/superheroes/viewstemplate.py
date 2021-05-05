@@ -15,7 +15,7 @@ def hero_hard_way(request, hero_name):
     }
     t = get_template('hero_basic.html')
     page = t.render(data)
-    return HttpResponse(page)
+    return HttpResponse(page, 200)
 
 def hero_easy_way(request, hero_name):
     hero =  get_object_or_404(Superhero, name=hero_name)
