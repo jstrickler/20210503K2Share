@@ -1,5 +1,7 @@
 """
 URL Configuration for superheroes
+    '' home page
+    hero/*name* display hero details
 """
 from django.urls import path
 from . import views   # import views from app

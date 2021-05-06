@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load super_extras %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +10,7 @@
 <h2>Secret Identity: {{ hero.secret_identity | upper }}</h2>
 <h2>Secret Identity (short):
     {{ hero.secret_identity | slice:"0:5" }}
+    {{ hero.secret_identity | truncate }}
 </h2>
 <h2>Real Name: {{ hero.real_name | upper }}</h2>
 <h2>First enemy: {{ hero.enemies.all.0 }}</h2>
@@ -16,6 +18,7 @@
 <h3>Number of enemies: {{ hero.enemies.all | length }}</h3>
 <h3>Enemies: {{ hero.enemies.all | join:", " }}</h3>
 <h3>Enemies: <br/>{{ hero.enemies.all | join:"<br/>" }}</h3>
+<h3>Current time: {% get_current_time %}</h3>
 
 </body>
 </html>
