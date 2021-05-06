@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tate_core.apps.TateCoreConfig',
+    'django_extensions',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
