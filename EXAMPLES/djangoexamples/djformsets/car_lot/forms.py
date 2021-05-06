@@ -10,5 +10,5 @@ class CarForm(forms.ModelForm):
 
 
 CarFormSet = forms.modelformset_factory(
-    Car, fields=['make', 'model', 'year'], extra=2
+    Car, fields=['make', 'model', 'year'], extra=5
 )

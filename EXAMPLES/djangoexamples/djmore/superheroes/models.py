@@ -1,3 +1,4 @@
+from random import random
 from django.db import models
 import logging
 
