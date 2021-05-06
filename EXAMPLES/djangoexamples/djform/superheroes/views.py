@@ -3,8 +3,8 @@
 
     These are forms illustrating how forms work in Django
 """
-from django.shortcuts import get_object_or_404, render
-from .forms import DemoForm, HeroForm, HeroModel
+from django.shortcuts import get_object_or_404, render, redirect
+from .forms import DemoForm, HeroForm, HeroModelForm, CityModelForm
 from .models import Superhero
 
 def home(request):
@@ -29,7 +29,7 @@ def demoform(request):
     """
     invalid = False
 
-    if request.method == 'POST':
+    if request.method == 'POST':  # if form filled out
         form = DemoForm(request.POST)
         if form.is_valid():
             # if data is valid, show results page
@@ -95,7 +95,7 @@ def heromodel(request):
 
     # bound (filled-in) form
     if request.method == 'POST':
-        form = HeroModel(request.POST)
+        form = HeroModelForm(request.POST)
         if form.is_valid():
             context = {
                 'page_title': 'Hero Details',
@@ -108,10 +108,40 @@ def heromodel(request):
 
     else:
         # unbound (empty) form
-        form = HeroModel()
+        form = HeroModelForm()
 
         context = {
             'page_title': 'Form Example',
             'form': form,
         }
         return render(request, 'hero_model_select.html', context)
+
+def cityform(request):
+    """
+
+    :param request: HTTP request
+    :return: HTTP Response
+    """
+
+    # bound (filled-in) form
+    if request.method == 'POST':
+        form = CityModelForm(request.POST)
+        if form.is_valid():
+            # write request to DB or log here ...
+
+            form.save()
+            return redirect("superheroes:success")
+
+    else:
+        # unbound (empty) form
+        form = CityModelForm()
+
+        context = {
+            'page_title': 'Form Example',
+            'form': form,
+        }
+        return render(request, 'city_form.html', context)
+
+
+def success(request):
+    return render(request, 'success.html', context={})
