@@ -1,0 +1,20 @@
+{% extends "car_lot/car_lot_base.html" %}
+{% block content %}
+<div class="container">
+
+    <form id="form-container" method="POST">
+        {% csrf_token %}
+        {{ car_formset.management_form }}
+        {% for form in car_formset %}
+        <h3>Add car</h3>
+            <div class="'car-form">
+                {{ form.as_p }}
+            </div>
+            <hr/>
+        {% endfor %}
+        <button type="submit">Add cars</button>
+    </form>
+
+</div>
+{% endblock content %}
+

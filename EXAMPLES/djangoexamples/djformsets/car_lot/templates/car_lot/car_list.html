@@ -1,0 +1,12 @@
+{% extends "car_lot/car_lot_base.html" %}
+{% block content %}
+<div class="container">
+    <ol>
+        {% for car in object_list %}
+            <li>{{ car.make }} {{ car.model }} {{ car.year }}</li>
+        {% endfor %}
+    </ol>
+    <a href="{% url 'car_lot:add' %}">Add Car</a>
+</div>
+{% endblock content %}
+
