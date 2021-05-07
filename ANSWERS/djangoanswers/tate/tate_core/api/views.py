@@ -35,13 +35,18 @@ def artists(request, guid):
         return Response(serializer.data)
 
 # class-based views (aka CBVs)
+#  GET /api/artist  return list of all artists
+#  POST /api/artist  create new artist
 class ArtistsList(generics.ListCreateAPIView):
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = ArtistFilter
 
-
+# GET /api/artist/N  get details for artist
+# PUT /api/artist/N  replace all data for artist
+# PATCH /api/artist/N update some data for artist
+# DELETE /api/artist/N delete artist
 class ArtistsDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Artist.objects.all()
     serializer_class = ArtistSerializer
@@ -56,7 +61,7 @@ class ArtworksList(generics.ListCreateAPIView):
     filterset_class = ArtworkFilter
 
 
-class ArtistsDetail(generics.RetrieveUpdateDestroyAPIView):
+class ArtworksDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Artwork.objects.all()
     serializer_class = ArtworkSerializer
     filter_backends = [DjangoFilterBackend]
