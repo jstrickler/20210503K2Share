@@ -1,0 +1,13 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ dog.name }} ({{ dog.breed }})</h2>
+    <h3>Sex: {{ dog.sex }}</h3>
+    <h3>Is neutered: {{ dog.is_neutered }}</h3>
+    <h3>Weight: {{ dog.weight }}</h3>
+    <h3>Bites: {{ dog.bites }}</h3>
+    <br/>
+    <a href="{% url 'dogs_core:dogs' %}">Return to Dogs page</a>
+</div>
+{% endblock content %}
+

@@ -1,0 +1,11 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ breed.name }}</h2>
+    <h3>Short name: {{ breed.abbr }}</h3>
+        <br/>
+
+    <a href="{% url 'dogs_core:breeds' %}">Return to Breed page</a>
+</div>
+{% endblock content %}
+

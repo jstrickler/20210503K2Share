@@ -32,6 +32,21 @@
       {% block content %}
         <p>Default content for dogs_core</p>
       {% endblock content %}
+
+      <!--
+      add a link to every page to return to the home page,
+      unless we're actually on the home page
+
+      IRL this would  probably be an image of the site's logo
+      or something similar
+      -->
+      {% if not home %}
+      <br/>
+
+      <a href="{% url 'dogs_core:home' %}">Return to Home page</a>
+      {% endif %}
+
+
       {% block footer %}{% endblock footer %}
 
     </div> <!-- /container -->

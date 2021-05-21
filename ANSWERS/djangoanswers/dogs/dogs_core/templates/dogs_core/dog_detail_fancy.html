@@ -1,0 +1,14 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% load custom_filters %}
+{% block content %}
+<div class="container">
+    <h2>{{ dog | fancy}})</h2>
+    <h3>Sex: {{ dog.sex }}</h3>
+    <h3>Is neutered: {{ dog.is_neutered }}</h3>
+    <h3>Weight: {{ dog.weight }}</h3>
+    <h3>Bites: {{ dog.bites }}</h3>
+    <br/>
+    <a href="{% url 'dogs_core:fancy_list' %}">Return to Dogs (Fancy) page</a>
+</div>
+{% endblock content %}
+

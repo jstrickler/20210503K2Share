@@ -1,0 +1,12 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% block content %}
+<div class="container">
+    <h1>{{ message }}</h1>
+
+    <a href="{% url 'dogs_core:dogs' %}">Dog List</a> <br/>
+    <a href="{% url 'dogs_core:breeds' %}">Breed List</a> <br/>
+    <a href="{% url 'dogs_core:fancy_list' %}">Fancy List</a> <br/>
+    <a href="{% url 'dogs_core:dogs_include' %}">Template with Include</a>  <br/>
+</div>
+{% endblock content %}
+

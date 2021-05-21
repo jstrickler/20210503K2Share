@@ -1,0 +1,14 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% block content %}
+<div class="container">
+    <h1>Breeds</h1>
+    <table>
+    {% for breed in breeds %}
+        <tr><td><a href="{% url 'dogs_core:breed' breed.id %}">{{ breed.name }}</a></td>
+    {% endfor %}
+    </table>
+        <br/>
+
+</div>
+{% endblock content %}
+

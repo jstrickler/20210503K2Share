@@ -1,0 +1,12 @@
+{% extends "dogs_core/dogs_core_base.html" %}
+{% load custom_filters %}
+{% block content %}
+<div class="container">
+    <h1>Dogs</h1>
+    {% for dog in dogs %}
+        <a href="{% url 'dogs_core:fancy_detail' dog.id %}">{{ dog | fancy }}</a><br/>
+    {% endfor %}
+        <br/>
+</div>
+{% endblock content %}
+
